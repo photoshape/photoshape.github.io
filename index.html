@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>PhotoShape: Photorealistic Materials for Large-Scale Shape Collections — Keunhong Park</title>
+
+  <!-- Google Tag Manager -->
+  <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-THP5XBK"></script>
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THP5XBK');</script>
+  <!-- End Google Tag Manager -->
+
+  <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="./static/css/bulma.min.css" rel="stylesheet">
+  <link href="./static/css/index.css" rel="stylesheet">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-72422365-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body publication-banner" style="background-image: url(./static/images/background.jpg)">
+  </div>
+</section>
+
+<section class="hero publication-header">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="is-size-6 publication-venue">SIGGRAPH Asia 2018</div>
+
+          <div class="is-size-6 is-bold publication-awards">Transactions on Graphics (TOG) Special Issue Cover</div>
+
+          <h1 class="title is-1 publication-title">PhotoShape: Photorealistic Materials for Large-Scale Shape Collections</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block author-block-"><a href="https://keunhong.com/">Keunhong Park</a></span>,
+            <span class="author-block author-block-"><a href="https://homes.cs.washington.edu/~krematas/">Konstantinos Rematas</a></span>,
+            <span class="author-block author-block-"><a href="https://homes.cs.washington.edu/~ali">Ali Farhadi</a></span>,
+            <span class="author-block author-block-"><a href="https://homes.cs.washington.edu/~seitz/">Steve Seitz</a></span>
+          </div>
+
+          <div class="publication-links">
+        <span class="link-block link-block-">
+          <a class="external-link button is-small is-rounded is-link" href="http://bit.ly/2NsxjgP">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>PDF (High Res, 87.2 MB)</span>
+          </a>
+        </span>
+            <span class="link-block link-block-">
+          <a class="external-link button is-small is-rounded is-link" href="http://bit.ly/2DiNvwk">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>PDF (Low Res, 8.6 MB)</span>
+          </a>
+        </span>
+
+            <span class="link-block link-block-">
+          <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/abs/1809.09761">
+            <span class="icon"> <i class="ai ai-arxiv"></i></span>
+            <span>arXiv</span>
+          </a>
+        </span>
+
+            <span class="link-block link-block-">
+          <a class="external-link button is-small is-rounded is-link" href="https://github.com/keunhong/photoshape">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+          </a>
+        </span>
+            <span class="link-block link-block-">
+          <a class="external-link button is-small is-rounded is-link" href="https://dl.acm.org/citation.cfm?id=3275066">
+            <span class="icon"><i class="ai ai-acmdl"></i></span>
+            <span>ACM</span>
+          </a>
+        </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="publication-video">
+          <iframe allow="autoplay; encrypted-media"
+                  allowfullscreen frameborder="0" src="https://www.youtube.com/embed/G1p8GZYVdTQ?rel=0&amp;showinfo=0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <h2>Abstract</h2>
+          <p>Existing online 3D shape repositories contain thousands of 3D models but lack photorealistic appearance. We present an approach to automatically assign high-quality, realistic appearance
+            models to large scale 3D shape collections. The key idea is to jointly leverage three types of online data – shape collections, material collections, and photo collections, using the
+            photos as
+            reference to guide assignment of materials to shapes. By generating a large number of synthetic renderings, we train a convolutional neural network to classify materials in real photos,
+            and
+            employ 3D-2D alignment techniques to transfer materials to different parts of each shape model. Our system produces photorealistic, relightable, 3D shapes (PhotoShapes).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="has-text-centered">
+            <div style="max-width: 480px; overflow: hidden; display: inline-block">
+              <img src="./static/images/four-way.jpg" style="width: 100%; max-height: auto">
+            </div>
+            <br>
+            Fully automatic texturing of 3D shapes with rich SV-BRDF reflectance models.
+          </div>
+          <h2>Code and Data</h2>
+          <p>All of the code relevant to this project is available on <a href="https://github.com/keunhong/photoshape">github</a>.</p>
+          <h3>Material (SVBRDF) Dataset</h3>
+          <ul>
+            <li><a class="external-link" href="https://homes.cs.washington.edu/~kpar/photoshape/materials-500x500/aittala-beckmann.tar.gz">Scanned Materials</a> (859 MB)</li>
+            <li><a class="external-link" href="https://homes.cs.washington.edu/~kpar/photoshape/materials-500x500/vray-materials-de.tar.gz">V-Ray Materials</a> (782 MB)</li>
+            <li>Adobe Stock and Poliigon materials have restrictive licenses. Directions for getting these materials can be found <a href="https://github.com/keunhong/photoshape#adobe-stock">here</a>.
+            </li>
+          </ul>
+          <h3>Material Classifier</h3>
+          <ul>
+            <li><a class="external-link" href="https://drive.google.com/file/d/1mwmpCEAVT4hA64DK8fMMyCxpt9L_Bgwq/view?usp=sharing">Synthetic Training Data</a> (1.5 GB, <a
+                href="https://lmdb.readthedocs.io/en/release/">LMDB</a>)
+            </li>
+            <li><a class="external-link" href="https://homes.cs.washington.edu/~kpar/photoshape/classifier/model.tar.gz)">Trained Weights</a> (155 MB)</li>
+          </ul>
+          <h3>Photorealistic Shape Dataset</h3>
+          <p>Provided as Blender scenes. Note that these archives contain the raw output of our pipeline which means they also contain failure cases. More detailed JSON inference results may be found
+            in
+            the Github repository.</p>
+          <p><strong>Important Note</strong>: Blender &gt;=2.79 is required to render these scenes due to the use of the Principled BRDF.</p>
+          <ul>
+            <li><a class="external-link" href="https://drive.google.com/open?id=1ux6RQohWG85HLP58Q_v25141OOiR9gqY">Herman Miller Chairs</a> (636 shapes, 6.0 GB)</li>
+            <li><a class="external-link" href="https://drive.google.com/file/d/1-mQpYIolNKFFmZ2xwPP0OuFR54lLV_FM/view?usp=sharing">ShapeNet Chairs</a> (15,576 shapes, 146 GB)</li>
+          </ul>
+          <h2>Bibtex</h2>
+          <pre><code>@article{photoshape2018,
+ author = {Park, Keunhong and Rematas, Konstantinos and Farhadi, Ali and Seitz, Steven M.},
+ title = {PhotoShape: Photorealistic Materials for Large-Scale Shape Collections},
+ journal = {ACM Trans. Graph.},
+ issue_date = {November 2018},
+ volume = {37},
+ number = {6},
+ month = nov,
+ year = {2018},
+ articleno = {192},
+}
+</code></pre>
+          <h2>Acknowledgements</h2>
+          <p>This work was supported by the Samsung Scholarship, the Allen Institute for Artificial Intelligence, Intel, Google, and the National Science Foundation (IIS1538618).</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a href="mailto:46Aik2sugTKFHX92@keunhong.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a class="external-link" href="https://github.com/keunhong">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="external-link"
+         href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6ma662dZahhSxXWh4usLcc9Y_4mLjlVZIydlL0F9lJgXde_tlP9Cws3dnoyrqppSz81tUGCG-RqawbVWHuOyy9PdPm3iZuxDLbCuYMem8YLzTQ1VA&user=HVZb-5oAAAAJ">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </div>
+</footer>
+
+
+</body>
+</html>
